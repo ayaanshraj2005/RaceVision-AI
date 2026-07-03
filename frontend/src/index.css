@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-darkBg: #111216;
+  --color-cardBg: #181A20;
+  --color-borderColor: #2D3139;
+  --color-accentGreen: #00F29E;
+  --color-accentBlue: #00D4FF;
+  --color-accentRed: #FF4A6B;
+  --color-accentYellow: #FFC837;
+  --color-accentPurple: #D946EF;
+}
+
+@layer base {
+  body {
+    background-color: #111216;
+    color: #E1E4EA;
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Glassmorphism premium card utility */
+.glass-card {
+  background: rgba(24, 26, 32, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(45, 49, 57, 0.6);
+  border-radius: 12px;
+}
+
+/* Custom premium scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111216;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D3139;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f4552;
+}

@@ -1,0 +1,29 @@
+2026-07-02 23:42:23,481 [INFO] Initializing Feature Engineering Pipeline...
+2026-07-02 23:42:23,482 [INFO] Loading cleaned datasets...
+2026-07-02 23:42:23,574 [INFO] Starting chronological feature engineering...
+2026-07-02 23:42:24,243 [INFO] Computing constructor rolling strength index...
+2026-07-02 23:42:24,309 [INFO] Computing circuit grid importance scores...
+2026-07-02 23:42:24,330 [INFO] Imputing initial career values for rolling metrics...
+2026-07-02 23:42:24,341 [INFO] Scoping training slice to modern Hybrid Era (2010 - Present) to ensure data stability...
+2026-07-02 23:42:24,387 [INFO] 
+--- Multicollinearity (VIF) Analysis ---
+                   Feature        VIF
+                      grid 127.051126
+       driver_rolling_grid  94.402005
+         grid_delta_to_avg  56.176199
+         driver_avg_finish  24.271393
+         driver_top10_rate  15.044523
+        driver_podium_rate  13.960119
+         driver_experience   8.625066
+           driver_win_rate   7.809989
+           driver_dnf_rate   5.864195
+        driver_recent_form   5.275644
+                driver_age   5.046330
+constructor_strength_index   3.771522
+        driver_consistency   3.123966
+       circuit_familiarity   2.652710
+   circuit_grid_importance   1.053644
+              is_home_race   1.012742
+2026-07-02 23:42:24,450 [INFO] Saved unscaled ML-ready dataset to C:\Project\RaceVision AI\data\processed\ml_ready_dataset.csv (Rows: 5097)
+2026-07-02 23:42:24,458 [INFO] Saved Feature Engineering Report to reports/ and artifacts folder.
+2026-07-02 23:42:24,458 [INFO] Feature Engineering Pipeline Completed Successfully!

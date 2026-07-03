@@ -1,0 +1,66 @@
+2026-07-02 23:48:41,230 [INFO] Starting Machine Learning Training Pipeline...
+2026-07-02 23:48:41,246 [INFO] Splitting dataset chronologically...
+2026-07-02 23:48:41,250 [INFO] Train Set size: 3877 rows (2010-2018)
+2026-07-02 23:48:41,251 [INFO] Validation Set size: 760 rows (2019-2020)
+2026-07-02 23:48:41,251 [INFO] Test Set size: 440 rows (2021-2021)
+2026-07-02 23:48:41,256 [INFO] Saved fitted StandardScaler to C:\Project\RaceVision AI\models\scaler.joblib
+2026-07-02 23:48:41,256 [INFO] Training and tuning Regression Models...
+2026-07-02 23:48:41,262 [INFO] Tuning Decision Tree Regressor...
+2026-07-02 23:48:44,158 [INFO] Decision Tree Regressor Best Params: {'max_depth': 5} | Test RMSE: 4.429
+2026-07-02 23:48:44,159 [INFO] Tuning Random Forest Regressor...
+2026-07-02 23:48:47,974 [INFO] Random Forest Regressor Best Params: {'max_depth': 5, 'n_estimators': 100} | Test RMSE: 4.249
+2026-07-02 23:48:47,974 [INFO] Tuning Gradient Boosting Regressor...
+2026-07-02 23:48:51,853 [INFO] Gradient Boosting Regressor Best Params: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 50} | Test RMSE: 4.318
+2026-07-02 23:48:51,853 [INFO] Tuning Extra Trees Regressor...
+2026-07-02 23:48:52,548 [INFO] Extra Trees Regressor Best Params: {'max_depth': 5, 'n_estimators': 100} | Test RMSE: 4.245
+2026-07-02 23:48:52,559 [INFO] Training and tuning Classification Models...
+2026-07-02 23:48:52,627 [INFO] Tuning Random Forest Classifier...
+2026-07-02 23:48:53,539 [INFO] Random Forest Classifier Best Params: {'max_depth': 5, 'n_estimators': 50} | Test F1: 0.655
+2026-07-02 23:48:53,539 [INFO] Tuning Gradient Boosting Classifier...
+2026-07-02 23:48:57,461 [INFO] Gradient Boosting Classifier Best Params: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 50} | Test F1: 0.595
+2026-07-02 23:48:57,481 [INFO] Best Regressor Selected: Extra Trees (RMSE: 4.245). Saved to C:\Project\RaceVision AI\models\best_regressor.joblib
+2026-07-02 23:48:57,492 [INFO] Best Classifier Selected: Random Forest Classifier (F1 Score: 0.655). Saved to C:\Project\RaceVision AI\models\best_classifier.joblib
+2026-07-02 23:48:57,513 [INFO] Generating standard evaluation plots...
+2026-07-02 23:48:57,970 [INFO] Saved visualization to prediction_vs_actual.png
+2026-07-02 23:48:58,300 [INFO] Saved visualization to residual_analysis.png
+2026-07-02 23:48:58,573 [INFO] Saved visualization to feature_importance_ml.png
+2026-07-02 23:48:58,789 [INFO] Saved visualization to error_distribution_ml.png
+2026-07-02 23:48:58,789 [INFO] Generating learning curve for Extra Trees...
+2026-07-02 23:48:59,493 [INFO] Saved visualization to learning_curve_reg.png
+2026-07-02 23:48:59,493 [INFO] Generating learning curve for Random Forest Classifier...
+2026-07-02 23:49:00,118 [INFO] Saved visualization to learning_curve_clf.png
+2026-07-02 23:49:00,118 [INFO] Generating ROC and Precision-Recall Curves...
+2026-07-02 23:49:00,347 [INFO] Saved visualization to roc_curve.png
+2026-07-02 23:49:00,550 [INFO] Saved visualization to pr_curve.png
+2026-07-02 23:49:00,550 [INFO] Computing Permutation Feature Importance...
+2026-07-02 23:49:01,123 [INFO] Saved visualization to permutation_importance.png
+2026-07-02 23:49:01,123 [INFO] Verifying RacePredictor inference pipeline...
+2026-07-02 23:49:01,182 [INFO] 
+--- Verification Sample Predictions (Race ID 1051 - 2021 Bahrain GP) ---
+2026-07-02 23:49:01,185 [INFO] 
+       driver_name constructor_name  grid  predicted_finishing_position  predicted_podium_probability  driver_performance_score  team_performance_score
+    Lewis Hamilton         Mercedes     1                             1                      0.615373                        60                      98
+   Fernando Alonso   Alpine F1 Team     3                             8                      0.216388                        51                      58
+    Kimi Räikkönen       Alfa Romeo    16                            15                      0.016644                        43                      25
+  Sebastian Vettel     Aston Martin    10                            12                      0.066784                        46                      40
+      Sergio Pérez         Red Bull    11                             7                      0.266277                        50                      80
+  Daniel Ricciardo          McLaren    14                            13                      0.042756                        45                      58
+   Valtteri Bottas         Mercedes     6                             2                      0.279940                        61                      98
+    Max Verstappen         Red Bull     7                             3                      0.404171                        59                      80
+      Carlos Sainz          Ferrari     5                             5                      0.162730                        54                      70
+      Esteban Ocon   Alpine F1 Team     9                            11                      0.010785                        50                      58
+      Lance Stroll     Aston Martin    12                            14                      0.003053                        45                      40
+Antonio Giovinazzi       Alfa Romeo    18                            17                      0.002450                        45                      25
+      Pierre Gasly       AlphaTauri     2                             4                      0.306448                        54                      70
+   Charles Leclerc          Ferrari    13                             9                      0.126375                        52                      70
+      Lando Norris          McLaren     4                             6                      0.197536                        51                      58
+    George Russell         Williams    15                            16                      0.002388                        45                      20
+   Nicholas Latifi         Williams    17                            18                      0.002357                        43                      20
+      Yuki Tsunoda       AlphaTauri     8                            10                      0.012344                        53                      70
+    Nikita Mazepin     Haas F1 Team    20                            20                      0.002357                        44                       8
+   Mick Schumacher     Haas F1 Team    19                            19                      0.002357                        42                       8
+2026-07-02 23:49:01,185 [INFO] Computing local prediction explanations...
+2026-07-02 23:49:01,199 [INFO] Compiling Phase 6 evaluation and explainability report...
+2026-07-02 23:49:01,201 [INFO] Saved unified Evaluation and Explainability Report.
+2026-07-02 23:49:01,204 [INFO] Saved Machine Learning Report to reports/ and artifacts folder.
+2026-07-02 23:49:01,204 [INFO] Machine Learning Pipeline Completed Successfully!

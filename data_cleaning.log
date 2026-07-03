@@ -1,0 +1,18 @@
+2026-07-02 23:25:26,737 [INFO] Initializing Data Cleaning Pipeline...
+2026-07-02 23:25:26,749 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\circuits.csv (Rows: 79)
+2026-07-02 23:25:26,755 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\constructors.csv (Rows: 211)
+2026-07-02 23:25:26,773 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\drivers.csv (Rows: 854)
+2026-07-02 23:25:26,817 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\races.csv (Rows: 1079)
+2026-07-02 23:25:27,059 [INFO] Outlier Analysis for 'results': Found 38 finished results with >4h duration (Red flag races).
+2026-07-02 23:25:27,059 [INFO] Outlier Analysis for 'results': Found 33 finished results with <40min duration.
+2026-07-02 23:25:27,158 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\results.csv (Rows: 25420)
+2026-07-02 23:25:27,166 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\status.csv (Rows: 137)
+2026-07-02 23:25:27,267 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\qualifying.csv (Rows: 9155)
+2026-07-02 23:25:29,117 [INFO] Outlier Analysis for 'lap_times': Found 764 laps >200s and 0 laps <45s.
+2026-07-02 23:25:30,229 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\lap_times.csv (Rows: 515715)
+2026-07-02 23:25:30,279 [INFO] Outlier Analysis for 'pit_stops': Found 285 pit stops >100 seconds.
+2026-07-02 23:25:30,299 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\pit_stops.csv (Rows: 8887)
+2026-07-02 23:25:30,445 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\driver_standings.csv (Rows: 33435)
+2026-07-02 23:25:30,511 [INFO] Saved cleaned table to C:\Project\RaceVision AI\data\processed\constructor_standings.csv (Rows: 12721)
+2026-07-02 23:25:30,512 [INFO] Data Cleaning Pipeline completed successfully!
+2026-07-02 23:25:30,513 [INFO] Preprocessing and data quality report successfully saved to C:\Project\RaceVision AI\data_preprocessing_report.md
