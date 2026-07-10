@@ -43,11 +43,13 @@ RaceVision AI models this problem using a unified ML pipeline:
 graph TD
     Client["Client (React App)"] -->|1. REST API Request| Main["src/main.py (FastAPI App)"]
     Main -->|2. Latency logging & CORS check| Middleware["RequestLoggingMiddleware"]
-    Main -->|3. Route Resolving| Routes["src/api/routes/*.py"]
+    Main -->|3. Route Resolution| Routes["src/api/routes/*.py"]
     Routes -->|4. Input Parsing & Validation| Schemas["src/schemas/*.py (Pydantic Models)"]
     Routes -->|5. Calls Business Logic| Services["src/services/*.py"]
-    Services -->|6a. ML Inference (scaler & models)| Joblib["models/*.joblib (Serialized Objects)"]
+
+    Services -->|6a. ML Inference| Joblib["models/*.joblib (Serialized Objects)"]
     Services -->|6b. CSV Data Queries| CSVs["data/processed/*.csv (F1 Clean Data)"]
+
     Services -->|7. Return Results| Routes
     Routes -->|8. Validate Response Schema| Schemas
     Routes -->|9. JSON Response| Client
